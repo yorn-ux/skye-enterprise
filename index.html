@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <header>SKYE BUSSINESS ENTERPRISE</header>
+</head>
+<body>
+    <h1>
+        <b> Welcome to Our Service</b>  
+    </h1>
+    
+    <!-- Functional Link -->
+    <p>Visit our <a href="https://www.example.com">main website</a> for more information.</p>
+    
+    <!-- Login/Registration Section -->
+    <h2>Login or Register</h2>
+    <form action="/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <button type="submit">Login</button>
+    </form>
+   
+    <p>Don't have an account? <a href="javascript:void(0);" onclick="showRegistrationForm()">Register here</a>.</p>
+    
+    <form id="registration-form" action="/register" method="post" style="display:none;">
+        <label for="reg-username">Username:</label>
+        <input type="text" id="reg-username" name="username" required><br><br>
+        
+        <label for="reg-password">Password:</label>
+        <input type="password" id="reg-password" name="password" required><br><br>
+        
+        <label for="confirm password"></label>
+        <input type="password" id="confirm password" name="confirm password" placeholder="Confirm Password"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <button type="submit">Register</button>
+        <script>
+            document.querySelector('form[action="/register"]').addEventListener('submit', function(event) {
+                if (!document.getElementById('payment-confirmation').checked) {
+                    event.preventDefault();
+                    alert('Please complete the payment first to continue with registration.');
+                }
+            });
+        </script>
+        <input type="checkbox" id="payment-confirmation" style="display:none;">
+    </form>
+
+    <script>
+        function showRegistrationForm() {
+            document.getElementById('registration-form').style.display = 'block';
+        }
+    </script>
+  
+    <!-- Payment Section -->
+    <h2>Payment</h2>
+    <form action="/pay" method="post">
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" value="200" readonly> Kenyan Shillings<br><br>
+        
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method">
+            <option value="mpesa">M-Pesa</option>
+            <option value="credit-card">Credit Card</option>
+        </select><br><br>
+        
+        <button type="submit">Pay</button>
+    </form>
+    <footer>
+        <p>&copy; 2025 skye Company. All rights reserved.</p>
+        </footer>
+       </body>
+</html>
