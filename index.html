@@ -1,19 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="keywords" content="Skye Enterprise, Skye, Enterprise, Business, Services, Jobs, Contact, Profile, Refer, Deposit, Submit Job">
+    <meta name="author" content="Yorn UX">
+    <meta name="description" content="Skye Enterprise is a business enterprise that offers various services and job opportunities.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link Page</title>
     <link rel="stylesheet" href="styles.css">
-    <header>SKYE BUSSINESS ENTERPRISE</header>
+    <script src="script.js"></script>
+        <header>SKYE BUSSINESS ENTERPRISE</header>
+
 </head>
 <body>
     <h1>
         <b> Welcome to Our Service</b>  
     </h1>
-    
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a>
+                <ul>
+                    <li><a href="/home#vision">Vision</a></li>
+                    <li><a href="/home#mission">Mission</a></li>
+                    <li><a href="/home#about">About</a></li>
+                </ul>
+             
+                </li>
+            <li><a href="/services">Services</a>
+                <ul 
+                    <li><a href="/services#designing">Designing</a></li>
+                    <li><a href="/services#kra-pin">KRA Pin</a></li>
+                    <li><a href="/services#writing">Writing</a></li>
+                    <li><a href="/services#online-task">Online Task</a></li>
+                </ul>
+               
+            </li>
+            <li><a href="/jobs">Jobs</a>
+                <ul 
+                    <li><a href="/jobs#advertisement">Advertisement</a></li>
+                    <li><a href="/jobs#grab-job-now">Grab Job Now</a></li>
+                </ul>
+           
+            </li>
+            <li><a href="/contact">Contact</a>
+                <ul 
+                    <li><a href="/contact#support">Support</a></li>
+                    <li><a href="/contact#feedback">Feedback</a></li>
+                    <li><a href="/contact#faq">FAQ</a></li>
+                </ul>
+                
+            </li>
+             
+            <li><a href="/profile">Profile</a>
+                <ul>
+                    <li>Username: <span id="profile-username"></span></li>
+                    <li>Amount: <span id="profile-amount"></span></li>
+                    <li>Earnings: <span id="profile-earnings"></span></li>
+                    <li>Minimal Withdrawal: 1000 KES</li>
+                    <li><a href="/refer">Refer a Friend and Earn</a></li>
+                    <li><a href="/deposit">Deposit</a></li>
+                    <li><a href="/submit-job">Submit Your Job</a></li>
+                </ul>
+            
+            </li>
+        </ul>
+    </nav>
+
+               
     <!-- Functional Link -->
-    <p>Visit our <a href="https://www.example.com">main website</a> for more information.</p>
+    <p>Visit our <a href="https://yorn-ux.github.io/skye-enterprise/">main website</a> for more information.</p>
     
     <!-- Login/Registration Section -->
     <h2>Login or Register</h2>
@@ -23,6 +81,8 @@
         
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
+      
+        <label for="remember-me">Remember Me:</label>
         
         <button type="submit">Login</button>
     </form>
@@ -43,23 +103,13 @@
         <input type="email" id="email" name="email" required><br><br>
         
         <button type="submit">Register</button>
-        <script>
-            document.querySelector('form[action="/register"]').addEventListener('submit', function(event) {
-                if (!document.getElementById('payment-confirmation').checked) {
-                    event.preventDefault();
-                    alert('Please complete the payment first to continue with registration.');
-                }
-            });
-        </script>
+       
+        <label for="payment-confirmation">Payment Confirmation:</label>
+
         <input type="checkbox" id="payment-confirmation" style="display:none;">
     </form>
 
-    <script>
-        function showRegistrationForm() {
-            document.getElementById('registration-form').style.display = 'block';
-        }
-    </script>
-  
+     
     <!-- Payment Section -->
     <h2>Payment</h2>
     <form action="/pay" method="post">
@@ -71,11 +121,16 @@
             <option value="mpesa">M-Pesa</option>
             <option value="credit-card">Credit Card</option>
         </select><br><br>
-        
+      
+        <label for="phone-number">Phone Number:</label>
+        <input type="tel" id="phone-number" name="phone-number" required><br><br>
+
         <button type="submit">Pay</button>
     </form>
+
+          
     <footer>
-        <p>&copy; 2025 skye Company. All rights reserved.</p>
+           <p>&copy; 2025 skye Company. All rights reserved.</p>
         </footer>
        </body>
 </html>
