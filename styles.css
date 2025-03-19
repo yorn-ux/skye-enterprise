@@ -63,9 +63,10 @@ button:hover {
 
 footer {
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #666;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
 }
 
 nav {
@@ -84,7 +85,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 205px;px;
 }
 
 nav ul li {
@@ -98,7 +99,7 @@ nav ul li a {
     font-weight: bold;
     transition: color 0.3s ease; 
     flex-direction: column;
-    gap: 10px;
+    gap: 50px;
 
 }
 

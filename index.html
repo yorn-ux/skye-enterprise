@@ -11,38 +11,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link Page</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-        <header>SKYE BUSSINESS ENTERPRISE</header>
-
-</head>
+    
+        <header>SKYE BUSINESS ENTERPRISE</header>
+       </head>
 <body>
-    <h1>
+       <h1>
         <b> Welcome to Our Service</b>  
     </h1>
     <nav>
         <ul>
             <li><a href="/home">Home</a>
-                <ul>
+                    <ul>
                     <li><a href="/home#vision">Vision</a></li>
                     <li><a href="/home#mission">Mission</a></li>
                     <li><a href="/home#about">About</a></li>
                 </ul>
+                <script>
+                    document.querySelector('a[href="/home"]').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const homeMenu = this.nextElementSibling;
+                        if (homeMenu.style.display === 'block') {
+                            homeMenu.style.display = 'none';
+                        } else {
+                            homeMenu.style.display = 'block';
+                        }
+                    });
+
+                    // Initially hide the home submenu
+                    document.querySelector('a[href="/home"]').nextElementSibling.style.display = 'none';
+                </script>
              
                 </li>
             <li><a href="/services">Services</a>
                 <ul 
-                    <li><a href="/services#designing">Designing</a></li>
-                    <li><a href="/services#kra-pin">KRA Pin</a></li>
-                    <li><a href="/services#writing">Writing</a></li>
-                    <li><a href="/services#online-task">Online Task</a></li>
+                    
+                    <li><a href="/services#marketing">Marketing</a></li>
+                    <li><a href="/services#web-development">Web Development</a></li>
+                    <li><a href="/services#content-writing">Content Writing</a></li>
+                    <li><a href="/services#editing">Editing</a></li>
+                    <li><a href="/services#copywriting">Copywriting</a></li>
+                    <li><a href="/services#programming">Programming</a></li>
+                    <li><a href="/services#video-editing">Video Editing</a></li>
+                    <li><a href="/services#animation">Animation</a></li>
+                    <li><a href="/services#graphic-design">Graphic Design</a></li>
+                    <li><a href="/services#logo-design">Logo Design</a></li>
                 </ul>
+                <script>
+                    document.querySelector('a[href="/services"]').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const servicesMenu = this.nextElementSibling;
+                        if (servicesMenu.style.display === 'block') {
+                            servicesMenu.style.display = 'none';
+                        } else {
+                            servicesMenu.style.display = 'block';
+                        }
+                    });
+
+                    // Initially hide the services submenu
+                    document.querySelector('a[href="/services"]').nextElementSibling.style.display = 'none';
+                </script>
                
             </li>
             <li><a href="/jobs">Jobs</a>
                 <ul 
-                    <li><a href="/jobs#advertisement">Advertisement</a></li>
-                    <li><a href="/jobs#grab-job-now">Grab Job Now</a></li>
+                    <li><a href="/jobs#job-opportunities">Job Opportunities</a></li>
+                    <li><a href="/jobs#job-application">Job Application</a></li>
                 </ul>
+                <script>
+                    document.querySelector('a[href="/jobs"]').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const jobsMenu = this.nextElementSibling;
+                        if (jobsMenu.style.display === 'block') {
+                            jobsMenu.style.display = 'none';
+                        } else {
+                            jobsMenu.style.display = 'block';
+                        }
+                    });
+
+                    // Initially hide the jobs submenu
+                    document.querySelector('a[href="/jobs"]').nextElementSibling.style.display = 'none';
+                </script>
            
             </li>
             <li><a href="/contact">Contact</a>
@@ -51,29 +99,61 @@
                     <li><a href="/contact#feedback">Feedback</a></li>
                     <li><a href="/contact#faq">FAQ</a></li>
                 </ul>
+                <script>
+                    document.querySelector('a[href="/contact"]').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const contactMenu = this.nextElementSibling;
+                        if (contactMenu.style.display === 'block') {
+                            contactMenu.style.display = 'none';
+                        } else {
+                            contactMenu.style.display = 'block';
+                        }
+                    });
+
+                    // Initially hide the contact submenu
+                    document.querySelector('a[href="/contact"]').nextElementSibling.style.display = 'none';
+                </script>
                 
             </li>
              
             <li><a href="/profile">Profile</a>
                 <ul>
-                    <li>Username: <span id="profile-username"></span></li>
-                    <li>Amount: <span id="profile-amount"></span></li>
-                    <li>Earnings: <span id="profile-earnings"></span></li>
-                    <li>Minimal Withdrawal: 1000 KES</li>
-                    <li><a href="/refer">Refer a Friend and Earn</a></li>
-                    <li><a href="/deposit">Deposit</a></li>
-                    <li><a href="/submit-job">Submit Your Job</a></li>
-                </ul>
+                    <li><a href="/profile#refer">Refer</a></li>
+                    <li><a href="/profile#deposit">Deposit</a></li>
+                    <li><a href="/profile#submit-job">Submit Job</a></li>
+                    <li><a href="/profile#logout">Logout</a></li>
+                    <li><a href="/profile#edit-profile">Edit Profile</a></li>
+                    <li><a href="/profile#view-profile">View Profile</a></li>
+                    <li><a href="/profile#view-jobs">View Jobs</a></li>
+                    <li><a href="/profile#view-services">View Services</a></li>
+                    <li><a href="/profile#view-feedbacks">View Feedbacks</a></li>
+
+                <script>
+                    document.querySelector('a[href="/profile"]').addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const profileMenu = this.nextElementSibling;
+                        if (profileMenu.style.display === 'block') {
+                            profileMenu.style.display = 'none';
+                        } else {
+                            profileMenu.style.display = 'block';
+                        }
+                    });
+
+                    // Initially hide the profile submenu
+                    document.querySelector('a[href="/profile"]').nextElementSibling.style.display = 'none';
+                </script>
+                    
+                    </ul>
             
             </li>
         </ul>
     </nav>
 
                
-    <!-- Functional Link -->
+   
     <p>Visit our <a href="https://yorn-ux.github.io/skye-enterprise/">main website</a> for more information.</p>
     
-    <!-- Login/Registration Section -->
+  
     <h2>Login or Register</h2>
     <form action="/login" method="post">
         <label for="username">Username:</label>
@@ -83,54 +163,80 @@
         <input type="password" id="password" name="password" required><br><br>
       
         <label for="remember-me">Remember Me:</label>
+        <input type="checkbox" id="remember-me" name="remember-me">
         
         <button type="submit">Login</button>
     </form>
+
+    <p>Forgot your password? <a href="/reset-password">Reset Password</a></p>
+    <div id="reset-password-form" style="display: none;">
+        <form action="/reset-password" method="post">
+        <label for="email">Enter your email address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="verification-code">Enter the verification code sent to your email:</label>
+        <input type="text" id="verification-code" name="verification-code" required><br><br>
+        <button type="button" id="send-verification-code">Send Verification Code</button>
+        <script>
+            document.getElementById('send-verification-code').addEventListener('click', function() {
+                const email = document.getElementById('email').value;
+                if (email) {
+                    alert(`Verification code sent to ${email}`);
+                    // Add logic to send the verification code to the email
+                } else {
+                    alert('Please enter your email address first.');
+                }
+            });
+        </script>
+
+        <label for="new-password">New Password:</label>
+        <input type="password" id="new-password" name="new-password" required><br><br>
+
+        <label for="confirm-new-password">Confirm New Password:</label>
+        <input type="password" id="confirm-new-password" name="confirm-new-password" required><br><br>
+
+
+            <button type="submit">Reset Password</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('a[href="/reset-password"]').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('reset-password-form').style.display = 'block';
+        });
+    </script>
+
    
-    <p>Don't have an account? <a href="javascript:void(0);" onclick="showRegistrationForm()">Register here</a>.</p>
-    
-    <form id="registration-form" action="/register" method="post" style="display:none;">
+<p>Don't have an account? <a href="/register" id="register-link">Register</a></p>
+<div id="registration-form" style="display: none;">
+        <form action="/register" method="post">
         <label for="reg-username">Username:</label>
         <input type="text" id="reg-username" name="username" required><br><br>
+        
+        <label for="reg-email">Email:</label>
+        <input type="email" id="reg-email" name="email" required><br><br>
         
         <label for="reg-password">Password:</label>
         <input type="password" id="reg-password" name="password" required><br><br>
         
-        <label for="confirm password"></label>
-        <input type="password" id="confirm password" name="confirm password" placeholder="Confirm Password"><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required><br><br>
         
         <button type="submit">Register</button>
-       
-        <label for="payment-confirmation">Payment Confirmation:</label>
-
-        <input type="checkbox" id="payment-confirmation" style="display:none;">
     </form>
+</div>
 
-     
-    <!-- Payment Section -->
-    <h2>Payment</h2>
-    <form action="/pay" method="post">
-        <label for="amount">Amount:</label>
-        <input type="text" id="amount" name="amount" value="200" readonly> Kenyan Shillings<br><br>
-        
-        <label for="payment-method">Payment Method:</label>
-        <select id="payment-method" name="payment-method">
-            <option value="mpesa">M-Pesa</option>
-            <option value="credit-card">Credit Card</option>
-        </select><br><br>
-      
-        <label for="phone-number">Phone Number:</label>
-        <input type="tel" id="phone-number" name="phone-number" required><br><br>
+<script>
+    document.getElementById('register-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('registration-form').style.display = 'block';
+    });
+</script>
 
-        <button type="submit">Pay</button>
-    </form>
-
-          
     <footer>
-           <p>&copy; 2025 skye Company. All rights reserved.</p>
-        </footer>
-       </body>
+        <p>&copy; 2025 Skye Business Enterprise</p>
+    </footer>
+
+</body>
 </html>
