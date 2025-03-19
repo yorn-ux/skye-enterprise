@@ -85,7 +85,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 205px;px;
+    gap: 20px;px;
 }
 
 nav ul li {
@@ -99,7 +99,7 @@ nav ul li a {
     font-weight: bold;
     transition: color 0.3s ease; 
     flex-direction: column;
-    gap: 50px;
+    gap:20px;
 
 }
 
