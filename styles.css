@@ -108,6 +108,8 @@ form {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     margin: 0 auto;
+
+
 }
 
 form input, form textarea {
@@ -117,11 +119,14 @@ form input, form textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
+
 }
 
 form input:focus, form textarea:focus {
     border-color: #007bff;
     outline: none;
+
 }
 
 form button {
@@ -134,13 +139,15 @@ form button {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
+
 }
 
 form button:hover {
     background: #0056b3;
+
 }
 
 body {
     overflow-x: hidden;
-    width: 100%;
+    width: 100%
 }
